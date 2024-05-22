@@ -23,7 +23,9 @@ Route::get('/about',[PageController::class,'about']);
 Route::get('/contact', [PageController::class, 'showContactForm']);
 Route::post('/contact', [PageController::class, 'submitContactForm']);
 
-Route::get('/product', [ProductController::class,'showProduct'] );
+Route::get('/product', [ProductController::class,'showProduct'] )->name('product.index');
 Route::get('/product/create', [ProductController::class,'createProduct'] );
-Route::post('/product', [ProductController::class,'store'] );
+Route::post('/product', [ProductController::class,'store'] )->name('product.store');
+Route::get('/product/{product}/edit', [ProductController::class,'edit'])->name('product.edit');
+Route::put('/product/{product}/update', [ProductController::class,'update'])->name('product.update');
 

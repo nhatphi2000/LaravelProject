@@ -6,7 +6,9 @@
 @section('content')
 <h1>This is Create Product page</h1>
 <div>index</div>
-<form method="post" action="">
+<form method="post" action="{{route('product.store')}}">
+    @csrf
+    @method('post')
     <div>
         <input type="text" name="name" placeholder="name">
     </div>
