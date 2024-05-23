@@ -1,5 +1,5 @@
 <!-- resources/views/contact.blade.php -->
-@extends('layouts.app')
+@extends('layouts.app2')
 
 @section('title', 'Contact Us')
 
